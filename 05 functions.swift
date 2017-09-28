@@ -39,7 +39,7 @@ print(printWelcomeMessage())
 
 // Passing and returning functions
 
-func makeIncrementer() -> (Int -> Int) {
+func makeIncrementer() -> (Int) -> Int {
     func addOne(number: Int) -> Int {
         return 1 + number
     }
@@ -47,5 +47,5 @@ func makeIncrementer() -> (Int -> Int) {
     return addOne
 }
 
-var increment =makeIncrementer()
+var increment = makeIncrementer()
 print(increment(7))
